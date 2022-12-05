@@ -1,0 +1,14 @@
+// mixins 
+@mixin spacing($margin, $padding) {
+    margin:$margin;
+    padding:$padding;
+}
+@mixin media {
+    display:flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+}
+@mixin headerimg-dimension {
+  height: 250px;
+  width: 400px;
+}

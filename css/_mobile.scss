@@ -1,0 +1,145 @@
+
+html {
+    box-sizing:border-box;
+  }
+  *, *:before, *::after {
+    box-sizing:inherit;
+  }
+  .header {
+      background-color: #59331d;
+      padding: 8px;
+        display: flex-direction column;
+    /*Logo */
+    & img {
+     @include headerimg-dimension;
+      margin: auto;
+      display: flex;
+      justify-content: $cent;
+    }
+}
+    /*Navbar */
+    ul {
+      list-style-type: none;
+    @include spacing(0 auto,0);
+      overflow: hidden;
+      text-align: center;
+      color: black;
+      background:white;
+      justify-content: space-between;
+    }
+    /*Navbar */
+    li {
+      font-size: 50px;
+      font-family: $navbar-font;
+      display: inline-block;
+      color: black;
+      border: 3px solid #000000;
+      margin: 6px;
+    & a {
+      color: black;
+      padding: 16px;
+      justify-content: space-between;
+    }
+}
+    /*Body */
+    main {
+      font-size: 24px;
+      justify-content: center;
+    }
+    .form {
+      color: black;
+      font-size: 16px;
+    }
+    /*Contact Us interaction */
+    #contact {
+      background-color: $button-color;
+      font-size: $button-font;
+      color: #fff;
+      cursor: pointer;
+      border: none;
+      text-align: center;
+      border-radius: 12px;
+      font-family: $secondary-font;
+      @include spacing(70px, 23px 42px);
+    
+    & hover {
+      border: none;
+      background:$button-color-hover;
+    }
+}
+    h1,
+    h2 {
+      margin: 25px;
+      font-family: $navbar-font;
+      font-size: 50px;
+    }
+    p {
+      @include spacing(13px,20px);
+      font-family: $secondary-font;
+      font-size: 25px;
+    }
+    figcaption {
+      font-family: $secondary-font;
+      font-size: 27px;
+      @include spacing(3px,10px);
+    }
+    img {
+      max-width: 450px;
+      height: 400px;
+      justify-content: center;
+      display: block;
+    }
+    footer {
+      font-family: $secondary-font;
+      text-align: center;
+      font-size: 36px;
+      @include spacing(20px, 15px);
+      border-style: ridge;
+      border-color: grey;
+      background-image: url("/media/coffeebaens.jpg");
+    }
+    /*NAvbar interaction */
+    a:link {
+      color: black;
+    }
+    a:hover {
+      color: #d98555;
+    }
+    a:active {
+      color: blue;
+}
+    /*Gallery & images */
+    .gallery {
+      flex-flow: row wrap;
+      display: flex;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: 2fr 3fr;
+      box-sizing: border-box;
+      justify-content: center;
+      justify-content: space-between;
+      white-space: nowrap;
+      overflow: hidden;
+  }
+  .gallery > div {
+   width: 300px;
+   display: inline-block;
+  }
+  @media (min-width: 990px) {
+    .gallery {
+      display:flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+  @media (max-width: 990px) {
+    .gallery {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+    .container {
+      display:flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+  }
+  }
